@@ -1,21 +1,24 @@
 package org.nonny.com.Controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("/user")
+
 public class UserController {
 	
-	@RestController
-	@RequestMapping("/home")
-
-	public class home {
-		
+	
+	
+	@GetMapping("/home")
 		public String home() {
 			
 			return "Welcome to HOME PAGE";
 			
 		}
-		
+		@PostMapping("/dashboard")
 	public String dashboard() {
 		
 		return "Welcome to DASHBOARD PAGE";
@@ -23,4 +26,4 @@ public class UserController {
 		
 
 	}
-}
+
